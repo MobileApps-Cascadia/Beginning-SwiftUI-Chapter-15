@@ -1,19 +1,31 @@
 //
 //  ContentView.swift
-//  Chapter15
+//  Chapter14
 //
-//  Created by Mike Panitz on 5/14/23.
+//  Created by Mike Panitz on 4/18/23.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            DisclosureGroupView()
+                .tabItem {
+                    Image(systemName: "1.circle")
+                    Text("Disclosure")
+                }
+            OutlineGroupView()
+                .tabItem {
+                    Image(systemName: "2.circle")
+                    Text("Indent")
+                }
+            ExercisesView()
+                .tabItem {
+                    Image(systemName: "3.square")
+                    Text("Exercises")
+                }
         }
         .padding()
     }
