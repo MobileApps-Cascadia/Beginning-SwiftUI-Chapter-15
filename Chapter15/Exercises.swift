@@ -58,7 +58,7 @@ struct ExercisesView: View {
             //  Text("Your groups go here")
             //  Text("More text after the form")
                 
-                DisclosureGroup(topExpanded ? "Tap to close class information" : "Tap to open class information", isExpanded: $topExpanded) {
+                //DisclosureGroup(topExpanded ? "Tap to close class information" : "Tap to open class information", isExpanded: $topExpanded) {
                     
                     
                     List(dicipl) { dicipl in
@@ -72,7 +72,7 @@ struct ExercisesView: View {
                                             .padding(.leading)
                                         Spacer()
                                         if selectedCourse.contains(where: { $0.id == course.id }) {
-                                            Image(systemName: "checkmark")
+                                            Image(systemName: "circle.circle.fill")
                                                 .foregroundColor(.blue)
                                         }
                                     }
@@ -80,7 +80,6 @@ struct ExercisesView: View {
                             }
                         }
                     }
-                }
 
                 Text("Selected Courses:")
                     .font(.headline)
